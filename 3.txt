@@ -1,0 +1,69 @@
+SQL> create table customer(id int primary key,name varchar(6),address varchar(7),city varchar(7),country varchar(5),age int,salary int);
+
+
+Table created.
+
+$SQL> insert into customer values(&id,'&name','&address','&city','&country',&age,&salary);
+
+1. $SQL> select * from customer where name like 'A%';
+
+	ID NAME   ADDRESS CITY	  COUNT        AGE     SALARY
+---------- ------ ------- ------- ----- ---------- ----------
+	 1 Abinj  Vakkom  Kotaym  India 		21	   22
+
+
+2. $SQL> select * from customer where name like '%fa%';
+
+	ID NAME   ADDRESS CITY	  COUNT        AGE     SALARY
+---------- ------ ------- ------- ----- ---------- ----------
+	 4 fatima ptnkd   ekm	  infia 		44	   33
+
+3. SQL> select * from customer where city like '%i';
+
+	ID NAME   ADDRESS CITY	  COUNT        AGE     SALARY
+---------- ------ ------- ------- ----- ---------- ----------
+	 8 Agni   Karksy  Cpsi	  India 		34	   33
+	 
+4. SQL> select * from customer where age like '2%';
+
+	ID NAME   ADDRESS CITY	  COUNT        AGE     SALARY
+---------- ------ ------- ------- ----- ---------- ----------
+	 1 Abinj  Vakkom  Kotaym  India 		21	   22
+
+5. SQL> select * from customer where SALARY like '%50%';
+
+	ID NAME   ADDRESS CITY	  COUNT        AGE     SALARY
+---------- ------ ------- ------- ----- ---------- ----------
+	 9 aJAI   Pmbr	  Ekm	  India 		45	 3504
+	 
+6. SQL> select * from customer where name like 'Ab_nj';
+
+	ID NAME   ADDRESS CITY	  COUNT        AGE     SALARY
+---------- ------ ------- ------- ----- ---------- ----------
+	 1 Abinj  Vakkom  Kotaym  India 		21	   22
+	 
+7. SQL> select * from customer where SALARY like '3__4';
+
+	ID NAME   ADDRESS CITY	  COUNT        AGE     SALARY
+---------- ------ ------- ------- ----- ---------- ----------
+	 9 aJAI   Pmbr	  Ekm	  India 		45	 3504
+	 
+8. SQL> select * from customer where NAME like '____j';
+
+	ID NAME   ADDRESS CITY	  COUNT        AGE     SALARY
+---------- ------ ------- ------- ----- ---------- ----------
+	 1 Abinj  Vakkom  Kotaym  India 		21	   22
+	 
+9. SQL> select * from customer where name not like 'Thomman';
+
+	ID NAME   ADDRESS CITY	  COUNT        AGE     SALARY
+---------- ------ ------- ------- ----- ---------- ----------
+	 1 Abinj  Vakkom  Kotaym  India 		1	   22
+	 2 Delvin Ekm	  south   Indis        556	   33
+	 4 fatima ptnkd   ekm	  infia 		44	   33
+	 6 gopi   pjpra   tvm	  ind			65	   33
+	 8 Agni   Karksy  Cpsi	  India 		34	   33
+	 9 aJAI   Pmbr	  Ekm	  India 		45	 3504
+
+6 rows selected.
+

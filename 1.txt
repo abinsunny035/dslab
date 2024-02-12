@@ -1,0 +1,78 @@
+create table student(rno int primary key,name varchar(10),course varchar(10),year date);
+
+desc student
+ Name					   Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ RNO					   NOT NULL NUMBER(38)
+ NAME						    VARCHAR2(10)
+ COURSE 					    VARCHAR2(10)
+ YEAR						    DATE
+
+
+
+insert into student values(&rno,'&name','&course','&year');
+
+Enter value for rno: 1
+Enter value for name: Adarsh
+Enter value for course: MCA
+Enter value for year: 12-jan-23
+old   1: insert into student values(&rno,'&name','&course','&year')
+new   1: insert into student values(1,'Adarsh','MCA','12-jan-23')
+
+select * from student;
+
+       RNO NAME       COURSE	 YEAR
+---------- ---------- ---------- --------
+	 1 Adarsh     MCA	 12-01-23
+	 2 Abhinadh   MCA	 12-02-24
+	 3 Abhinav    MCA	 14-12-23
+
+
+
+
+alter table student add mark int;
+
+Name					   Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ RNO					   NOT NULL NUMBER(38)
+ NAME						    VARCHAR2(10)
+ COURSE 					    VARCHAR2(10)
+ YEAR						    DATE
+ MARK						    NUMBER(38)
+ 
+ 
+ 
+alter table student rename column rno to rollno;
+
+Name					   Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ROLLNO 				   NOT NULL NUMBER(38)
+ NAME						    VARCHAR2(10)
+ COURSE 					    VARCHAR2(10)
+ YEAR						    DATE
+ MARK						    NUMBER(38)
+ 
+ 
+alter table student modify mark varchar(10);
+
+Name					   Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ROLLNO 				   NOT NULL NUMBER(38)
+ NAME						    VARCHAR2(10)
+ COURSE 					    VARCHAR2(10)
+ YEAR						    DATE
+ MARK						    VARCHAR2(10)
+
+truncate table student;
+
+no rows selected;
+--------------------------------------------------------
+drop tablse student;
+
+table dropped.
+
+desc student
+
+object student does not exist.
+
+

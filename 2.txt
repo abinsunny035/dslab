@@ -1,0 +1,5 @@
+create table employee(id int primary key,name varchar(10),dept varchar(10),salary int,city varchar (10));
+insert into employee values(&id,'&name','&dept',&salary,'&city');
+insert int employee values((1,'Adarsh','Sales',2000,'Karnataka'),(2,'Abhinadh','',,''));
+select * from employee
+
